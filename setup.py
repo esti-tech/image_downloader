@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='image_downloader',
-    version='0.1',
+    version='0.2',
     packages=find_packages(),
     install_requires=[
         'requests',
@@ -18,3 +18,4 @@ setup(
     ],
     python_requires='>=3.6',
 )
+
