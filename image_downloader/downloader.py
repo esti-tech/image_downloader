@@ -1,6 +1,5 @@
 import requests
 import re
-import os
 
 class Downloader:
     def __init__(self, prefix):
@@ -39,3 +38,19 @@ class Downloader:
             print(f"Image successfully downloaded as {file_name}")
         else:
             print("Failed to retrieve the image")
+
+    def start_downloading(self):
+        """
+        Start listening for URLs to download images continuously.
+        """
+        print("Enter image URLs to download. Type 'exit' to stop.")
+        while True:
+            url = input("Enter URL: ")
+            if url.lower() == 'exit':
+                print("Exiting the downloader.")
+                break
+            self.download(url)
+
+# Example usage:
+# downloader = Downloader("image")
+# downloader.start_downloading()
